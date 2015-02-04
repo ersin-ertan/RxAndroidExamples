@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">RxAndroidExamples</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+	<string name="title_activity_list_fragment">ListFragmentActivity</string>
+	<string name="title_activity_listen_in_out">ListenInOutActivity</string>
+	<string name="title_activity_listening_fragment">ListeningFragmentActivity</string>
+	<string name="title_activity_retained_fragment">RetainedFragmentActivity</string>
+	<string name="title_activity_lifcycle_observable">LifcycleObservableActivity</string>
+	<string name="title_activity_uibinding">UIBindingActivity</string>
+</resources>
