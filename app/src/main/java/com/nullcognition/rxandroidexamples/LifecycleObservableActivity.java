@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import rx.Subscription;
+import rx.android.app.RxActivity;
 import rx.android.lifecycle.LifecycleObservable;
 import rx.android.view.OnClickEvent;
 import rx.android.view.ViewObservable;

@@ -9,4 +9,5 @@
 	<string name="title_activity_retained_fragment">RetainedFragmentActivity</string>
 	<string name="title_activity_lifcycle_observable">LifcycleObservableActivity</string>
 	<string name="title_activity_uibinding">UIBindingActivity</string>
+	<string name="title_activity_activity_test">ActivityTest</string>
 </resources>
