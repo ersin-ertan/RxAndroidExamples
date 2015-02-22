@@ -1,4 +1,4 @@
-package com.nullcognition.rxandroidexamples;
+package com.nullcognition.rxandroidexamples.RXAndroidExamples;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import com.nullcognition.rxandroidexamples.R;
 
 import rx.Observable;
 import rx.Observer;

@@ -1,10 +1,16 @@
 apply plugin: 'com.android.application'
-apply plugin:  'hugo'
+apply plugin: 'hugo'
+apply plugin: 'me.tatarka.retrolambda'
 
 
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         applicationId "com.nullcognition.rxandroidexamples"
@@ -26,4 +32,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'io.reactivex:rxandroid:0.24.0'
     compile 'io.reactivex:rxandroid-framework:0.24.0'
+    compile 'com.jakewharton:butterknife:6.1.0'
+
 }

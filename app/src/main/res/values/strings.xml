@@ -10,4 +10,5 @@
 	<string name="title_activity_lifcycle_observable">LifcycleObservableActivity</string>
 	<string name="title_activity_uibinding">UIBindingActivity</string>
 	<string name="title_activity_activity_test">ActivityTest</string>
+	<string name="title_activity_activity_rx">ActivityRx</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.nullcognition.rxandroidexamples;
+package com.nullcognition.rxandroidexamples.RXAndroidExamples;
 /**
  * Created by ersin on 04/02/15 at 4:51 PM
  */

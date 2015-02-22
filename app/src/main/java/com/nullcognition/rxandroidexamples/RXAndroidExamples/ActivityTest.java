@@ -1,10 +1,12 @@
-package com.nullcognition.rxandroidexamples;
+package com.nullcognition.rxandroidexamples.RXAndroidExamples;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.nullcognition.rxandroidexamples.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

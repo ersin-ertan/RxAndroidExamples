@@ -9,7 +9,7 @@
 		android:tag="retained_fragment"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:name="com.nullcognition.rxandroidexamples.RetainedFragmentActivity$RetainedFragment"
+		android:name="com.nullcognition.rxandroidexamples.RXAndroidExamples.RetainedFragmentActivity$RetainedFragment"
 		tools:layout="@layout/retained_fragment"
 		/>
 

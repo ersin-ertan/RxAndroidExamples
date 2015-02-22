@@ -8,32 +8,37 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".ListFragmentActivity"
+            android:name=".RXAndroidExamples.ListFragmentActivity"
             android:label="@string/title_activity_list_fragment" >
         </activity>
         <activity
-            android:name=".ListenInOutActivity"
+            android:name=".RXAndroidExamples.ListenInOutActivity"
             android:label="@string/title_activity_listen_in_out" >
         </activity>
         <activity
-            android:name=".ListeningFragmentActivity"
+            android:name=".RXAndroidExamples.ListeningFragmentActivity"
             android:label="@string/title_activity_listening_fragment" >
         </activity>
         <activity
-            android:name=".RetainedFragmentActivity"
+            android:name=".RXAndroidExamples.RetainedFragmentActivity"
             android:label="@string/title_activity_retained_fragment" >
         </activity>
         <activity
-            android:name=".LifecycleObservableActivity"
+            android:name=".RXAndroidExamples.LifecycleObservableActivity"
             android:label="@string/title_activity_lifcycle_observable" >
         </activity>
         <activity
-            android:name=".UIBindingActivity"
+            android:name=".RXAndroidExamples.UIBindingActivity"
             android:label="@string/title_activity_uibinding" >
         </activity>
         <activity
-            android:name=".ActivityTest"
+            android:name=".RXAndroidExamples.ActivityTest"
             android:label="@string/title_activity_activity_test" >
+
+        </activity>
+        <activity
+            android:name=".ActivityRx"
+            android:label="@string/title_activity_activity_rx" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

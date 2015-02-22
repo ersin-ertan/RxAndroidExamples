@@ -1,4 +1,4 @@
-package com.nullcognition.rxandroidexamples;
+package com.nullcognition.rxandroidexamples.RXAndroidExamples;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+
+import com.nullcognition.rxandroidexamples.R;
 
 import rx.Observable;
 import rx.Subscriber;

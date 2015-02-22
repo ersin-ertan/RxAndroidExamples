@@ -1,4 +1,4 @@
-package com.nullcognition.rxandroidexamples;
+package com.nullcognition.rxandroidexamples.RXAndroidExamples;
 
 import android.os.Bundle;
 import android.util.Log;

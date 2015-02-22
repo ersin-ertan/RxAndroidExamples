@@ -1,4 +1,4 @@
-package com.nullcognition.rxandroidexamples;
+package com.nullcognition.rxandroidexamples.RXAndroidExamples;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.nullcognition.rxandroidexamples.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
