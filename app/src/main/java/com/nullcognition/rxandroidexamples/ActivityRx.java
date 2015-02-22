@@ -74,7 +74,7 @@ public class ActivityRx extends RxActivity {
 					 .subscribe(enabled -> btRx.setEnabled(enabled));
 
 	  // distinctUntilChanged is a performance optimization
-	  // since the change was occuring the subscriber is ca lled on every letter input regardless of the validity status change
+	  // since the change was occuring the subscriber is called on every letter input regardless of the validity status change
    }
 
    private void filterAndSubscribe(){
