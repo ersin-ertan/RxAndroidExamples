@@ -1,1 +1,1 @@
-include ':app', ':rxandroidsample'
+include ':app', ':rxandroidsample', ':danlewgrokkingrxjava', ':futuricerxjava', ':rxandquasar'

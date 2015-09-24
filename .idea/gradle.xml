@@ -11,6 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/danlewgrokkingrxjava" />
+            <option value="$PROJECT_DIR$/futuricerxjava" />
+            <option value="$PROJECT_DIR$/rxandquasar" />
             <option value="$PROJECT_DIR$/rxandroidsample" />
           </set>
         </option>
