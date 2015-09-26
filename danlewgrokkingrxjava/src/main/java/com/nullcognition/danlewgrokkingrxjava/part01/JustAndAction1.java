@@ -1,4 +1,4 @@
-package com.nullcognition.danlewgrokkingrxjava;
+package com.nullcognition.danlewgrokkingrxjava.part01;
 // ersin 25/09/15 Copyright (c) 2015+ All rights reserved.
 
 
