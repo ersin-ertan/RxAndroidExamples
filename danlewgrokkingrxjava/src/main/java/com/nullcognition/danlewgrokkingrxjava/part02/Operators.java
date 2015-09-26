@@ -46,6 +46,22 @@ public class Operators{
 
 	}
 
+	@DebugLog public void filteringNullsLimitingInput(){
+
+		query("test")
+				.flatMap(Observable::from)
+				.flatMap(this::getTitle)
+				.filter(s -> s != null) // filters out(excludes) objects which do not satisfy the boolean logic
+				.take(5) // only 5 objects
+				.doOnNext(this::capitalize)
+				.subscribe(title -> Log.d("RXX", title));
+
+		// can even make your own operators
+
+	}
+
+	@DebugLog public String capitalize(String input){ return input.toUpperCase();}
+
 	Observable<List<String>> query(String input){return Observable.just(new ArrayList<>());}
 
 	Observable<String> getTitle(String input){ return Observable.just("title"); }

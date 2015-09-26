@@ -19,7 +19,7 @@ android{
 		}
 	}
 
-	packagingOptions {
+	packagingOptions{
 		exclude 'META-INF/suspendable-supers'
 	}
 

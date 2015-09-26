@@ -1,14 +1,16 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="com.nullcognition.rxandroidexamples.RXAndroidExamples.UIBindingActivity">
+<RelativeLayout android:layout_height = "match_parent"
+                android:layout_width = "match_parent"
+                tools:context = "com.nullcognition.rxandroidexamples.RXAndroidExamples.UIBindingActivity"
+                xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:tools = "http://schemas.android.com/tools"
+	>
 
 	<fragment
-		android:tag="retained_fragment_v2"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:name="com.nullcognition.rxandroidexamples.RXAndroidExamples.UIBindingActivity$RetainedBindingFragment"
-		tools:layout="@layout/retained_fragment" />
+		android:layout_height = "match_parent"
+		android:layout_width = "match_parent"
+		android:name = "com.nullcognition.rxandroidexamples.RXAndroidExamples.UIBindingActivity$RetainedBindingFragment"
+		android:tag = "retained_fragment_v2"
+		tools:layout = "@layout/retained_fragment"
+		/>
 
 </RelativeLayout>

@@ -95,8 +95,8 @@
     <orderEntry type="library" exported="" name="reactive-streams-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="guava-18.0" level="project" />
     <orderEntry type="library" exported="" name="metrics-core-3.1.2" level="project" />
-    <orderEntry type="library" exported="" name="quasar-reactive-streams-0.7.3" level="project" />
     <orderEntry type="library" exported="" name="quasar-core-0.7.3" level="project" />
+    <orderEntry type="library" exported="" name="quasar-reactive-streams-0.7.3" level="project" />
     <orderEntry type="library" exported="" name="LatencyUtils-2.0.2" level="project" />
     <orderEntry type="library" exported="" name="rxandroid-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="kryo-serializers-0.36" level="project" />
