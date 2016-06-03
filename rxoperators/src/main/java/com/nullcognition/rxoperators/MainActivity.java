@@ -1,6 +1,8 @@
 package com.nullcognition.rxoperators;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -10,12 +12,15 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnCreatingOperators)
     void creatingOperators() {
+        startFragment(new CreatingObservables());
+    }
 
-        if (getSupportFragmentManager().findFragmentByTag(CreatingObservables.TAG) == null) {
-
-            getSupportFragmentManager().beginTransaction()
-                                       .replace(R.id.activity_main, new CreatingObservables(), CreatingObservables.TAG)
-                                       .commit();
+    private void startFragment(Fragment fragment) {
+        FragmentManager fm = getSupportFragmentManager();
+        if (fm.findFragmentByTag(CreatingObservables.TAG) == null) {
+            fm.beginTransaction()
+              .replace(R.id.activity_main, fragment, CreatingObservables.TAG)
+              .commit();
         }
     }
 
@@ -24,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
 
-
+    @Override
+    protected void onDestroy() {
+        RxAndUtils.unsubscribeSubscriptions();
+        super.onDestroy();
     }
 }

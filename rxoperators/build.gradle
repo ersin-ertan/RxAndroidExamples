@@ -26,6 +26,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile libs.supportLib
     compile libs.rxJava
+    compile libs.rxJavaString
     compile libs.rxAndroid
     compile libs.butterknife
     apt libs.butterknifeApt

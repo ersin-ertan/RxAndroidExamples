@@ -7,11 +7,12 @@ buildscript {
     }
 
     ext.versions = [
-            supportLib    : '23.4.0',
-            rxJava        : '1.1.5',
-            rxAndroid     : '1.2.0',
-            butterknife   : '8.0.1',
-            lightCycle    : '1.1.0'
+            supportLib  : '23.4.0',
+            rxJava      : '1.1.5',
+            rxJavaString: '1.1.0',
+            rxAndroid   : '1.2.0',
+            butterknife : '8.0.1',
+            lightCycle  : '1.1.0'
     ]
 
     ext {
@@ -27,6 +28,7 @@ buildscript {
         libs = [
                 supportLib    : "com.android.support:appcompat-v7:$versions.supportLib",
                 rxJava        : "io.reactivex:rxjava:$versions.rxJava",
+                rxJavaString  : "io.reactivex:rxjava-string:$versions.rxJavaString",
                 rxAndroid     : "io.reactivex:rxandroid:$versions.rxAndroid",
                 butterknife   : "com.jakewharton:butterknife:$versions.butterknife",
                 butterknifeApt: "com.jakewharton:butterknife-compiler:$versions.butterknife",
