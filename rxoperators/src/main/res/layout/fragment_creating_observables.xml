@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.nullcognition.rxoperators.CreatingObservables">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnJust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/just"/>
+
+            <Button
+                android:id="@+id/btnFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btnJust"
+                android:layout_below="@+id/btnJust"
+                android:text="From"/>
+
+            <Button
+                android:id="@+id/btnRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnFrom"
+                android:text="Repeat"/>
+
+            <Button
+                android:id="@+id/btnRepeatWhen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnRepeat"
+                android:text="RepeatWhen"/>
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnRepeatWhen"
+                android:text="Create"/>
+
+            <Button
+                android:id="@+id/btnDefer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnCreate"
+                android:text="Defer"/>
+
+            <Button
+                android:id="@+id/btnRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnDefer"
+                android:text="Range"/>
+
+            <Button
+                android:id="@+id/btnInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnRange"
+                android:text="Interval"/>
+
+            <Button
+                android:id="@+id/btnTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnInterval"
+                android:text="Timer"/>
+
+            <Button
+                android:id="@+id/btnEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnTimer"
+                android:text="Empty"/>
+
+            <Button
+                android:id="@+id/btnError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnEmpty"
+                android:text="Error"/>
+
+            <Button
+                android:id="@+id/btnNever"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnError"
+                android:text="Never"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

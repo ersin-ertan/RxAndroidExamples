@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RxOperators</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="just">Just</string>
+    <string name="creating_operators">Creating Operators</string>
+</resources>
