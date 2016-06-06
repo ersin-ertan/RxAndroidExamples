@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -14,14 +13,25 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnCreatingOperators"
+            android:id="@+id/btnCreatingObservables"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:text="@string/creating_operators"/>
+            android:text="@string/creating_observables"/>
+
+        <Button
+            android:id="@+id/btnStringObservables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnCreatingObservables"
+            android:text="@string/string_observables"
+            />
+
+
     </RelativeLayout>
-</RelativeLayout>
+</FrameLayout>
 
 
 

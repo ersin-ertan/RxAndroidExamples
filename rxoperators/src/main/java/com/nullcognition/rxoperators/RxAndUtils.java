@@ -2,6 +2,7 @@ package com.nullcognition.rxoperators;
 
 import android.util.Log;
 
+import rx.Observable;
 import rx.Subscriber;
 import rx.subscriptions.CompositeSubscription;
 
@@ -54,6 +55,10 @@ public class RxAndUtils {
         };
         registerToComposite(subscriber);
         return subscriber;
+    }
+
+    public static Observable<String> newObservableString() {
+        return Observable.just("a", "b", "c");
     }
 
     private static void registerToComposite(Subscriber subscriber) {

@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.nullcognition.rxoperators.StringObservables">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnByLine"
+                android:text="byLine"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDecode"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnByLine"
+                android:text="decode"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFromS"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnDecode"
+                android:text="fromS"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnJoin"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnFromS"
+                android:text="join"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSplit"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnJoin"
+                android:text="split"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnStringConcat"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnSplit"
+                android:text="StringConcat"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

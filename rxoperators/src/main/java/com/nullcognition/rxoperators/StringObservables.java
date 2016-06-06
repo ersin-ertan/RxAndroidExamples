@@ -7,14 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.concurrent.TimeUnit;
+import java.io.StringReader;
+import java.nio.charset.Charset;
+import java.util.regex.Pattern;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Func0;
-import rx.functions.Func1;
+import rx.observables.StringObservable;
 
 import static com.nullcognition.rxoperators.RxAndUtils.newSubscriber;
 import static com.nullcognition.rxoperators.RxAndUtils.newSubscriberObj;
@@ -32,93 +32,81 @@ public class StringObservables extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View fragmentView = inflater.inflate(R.layout.fragment_creating_observables, container, false);
+        View fragmentView = inflater.inflate(R.layout.fragment_string_observables, container, false);
         ButterKnife.bind(this, fragmentView);
         return fragmentView;
     }
 
+    public String sentence = "Line 0\nline 1 \n line 2. More words and lon\nger word.";
     public Observable<String> byLine() {
-        Log.d(TAG, "byLine abc");
-        return String.byLine("a", "b", "c");
+        Log.d(TAG, "byLine" + sentence);
+        return StringObservable.byLine(Observable.just(sentence));
     }
 
+    // not sure how this is suppose to work
     public Observable<String> decode() {
-        Log.d(TAG, "from string[] abc");
-        return Observable.from(new String[]{"a", "b", "c"});
+        Log.d(TAG, "1,0b0010_0101, 0b0000_0101");
+        return StringObservable.decode(Observable.just(new byte[]{1, 0b110_0101, 0b111_0101}), Charset.defaultCharset());
     }
 
-    public Observable<String> encode() {
-        Log.d(TAG, "repeat just a 3");
-        return Observable.just("a").repeat(3L);
-    }
+//    public Observable<String> encode() {
+//        Log.d(TAG, "repeat just a 3");
+//        return StringObservable.encode();
+//    }
 
-    public Observable<String> from() {
-        return Observable.just("a", "b", "c").repeatWhen(new Func1<Observable<? extends Void>, Observable<?>>() {
-            @Override
-            public Observable<?> call(Observable<? extends Void> observable) {
-                Log.d(TAG, "observeable repeatWhen observable.delay 3");
-                return observable.delay(3L, TimeUnit.SECONDS);
-            }
-        });
+    // not working
+    public Observable<String> fromS() {
+        Log.d(TAG, "from stringobservable");
+        return StringObservable.from(new StringReader("line0\nline1 more characters\nline2"));
     }
 
     public Observable<String> join() {
-        return Observable.create(new Observable.OnSubscribe<String>() {
-            @Override
-            public void call(Subscriber<? super String> subscriber) {
-                Log.d(TAG, "create OnSubscribe");
-                subscriber.onNext("subscriber.onNext");
-            }
-        });
+        Log.d(TAG, "join with byline observable and |seperator|");
+        return StringObservable.join(RxAndUtils.newObservableString(), "|seperator|");
     }
 
     public Observable<String> split() {
-        // create a new observable upon subscription
-        return Observable.defer(new Func0<Observable<String>>() {
-            @Override
-            public Observable<String> call() {
-                return Observable.just("a", "b", "c", String.valueOf(this.hashCode()));
-            }
-        });
+        Log.d(TAG, "split at newline");
+        return StringObservable.split(Observable.just("line0\nline1 more characters\nline2"), Pattern.compile("\\n"));
     }
 
-    public Observable<Integer> stringConcat() {
-        Log.d(TAG, "observable range 0-3");
-        return Observable.range(0, 3);
+    public Observable<String> stringConcat() {
+        Log.d(TAG, "stringConcat ");
+        return StringObservable.stringConcat(Observable.just("line0","line1 more characters","line2"));
     }
 
-    @OnClick(R.id.btnJust)
+    @OnClick(R.id.btnByLine)
     void a() {
-        just().subscribe(newSubscriber());
+        byLine().subscribe(newSubscriber());
     }
 
-    @OnClick(R.id.btnFrom)
+    @OnClick(R.id.btnDecode)
     void b() {
-        from().subscribe(newSubscriber());
+        decode().subscribe(newSubscriber());
     }
 
-    @OnClick(R.id.btnRepeat)
-    void c() {
-        repeat().subscribe(newSubscriber());
-    }
-
-    @OnClick(R.id.btnRepeatWhen)
+//    @OnClick(R.id.btnEncode)
+//    void c() {
+//        encode().subscribe(newSubscriber());
+//    }
+//
+    @OnClick(R.id.btnFromS)
     void d() {
-        repeatWhen().subscribe(newSubscriber());
+        fromS().subscribe(newSubscriber());
     }
 
-    @OnClick(R.id.btnCreate)
+    @OnClick(R.id.btnJoin)
     void e() {
-        create().subscribe(newSubscriber());
+        join().subscribe(newSubscriber());
     }
 
-    @OnClick(R.id.btnDefer)
+    @OnClick(R.id.btnSplit)
     void f() {
-        defer().subscribe(newSubscriber());
+        split().subscribe(newSubscriber());
     }
 
-    @OnClick(R.id.btnRange)
+    @OnClick(R.id.btnStringConcat)
     void g() {
-        range().subscribe(newSubscriberObj());
+        stringConcat().subscribe(newSubscriberObj());
     }
 }
