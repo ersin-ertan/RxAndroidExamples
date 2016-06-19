@@ -29,6 +29,15 @@
             android:text="@string/string_observables"
             />
 
+        <Button
+            android:id="@+id/btnUtilityOperators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnStringObservables"
+            android:text="@string/utility_operators"
+            />
+
 
     </RelativeLayout>
 </FrameLayout>

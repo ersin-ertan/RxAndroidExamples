@@ -11,13 +11,18 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnCreatingObservables)
-    void creatingOperators() {
+    void creatingObservables() {
         startFragment(new CreatingObservables());
     }
 
     @OnClick(R.id.btnStringObservables)
-    void stringOperators() {
+    void stringObservables() {
         startFragment(new StringObservables());
+    }
+
+    @OnClick(R.id.btnUtilityOperators)
+    void utilityOperators() {
+        startFragment(new UtilityOperators());
     }
 
     private void startFragment(Fragment fragment) {
