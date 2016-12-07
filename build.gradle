@@ -1,56 +1,53 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-
 buildscript {
-    repositories {
-        jcenter()
-    }
+  repositories {
+    jcenter()
+  }
 
-    ext.versions = [
-            supportLib  : '23.4.0',
-            rxJava      : '1.1.6',
-            rxJavaString: '1.1.0',
-            rxAndroid   : '1.2.0',
-            butterknife : '8.0.1',
-            lightCycle  : '1.1.0',
-            rxExtras    : '0.7.9.7'
+  ext.versions = [supportLib  : '23.4.0',
+                  rxJava      : '1.1.6',
+                  rxJavaString: '1.1.0',
+                  rxAndroid   : '1.2.0',
+                  butterknife : '8.0.1',
+                  lightCycle  : '1.1.0',
+                  rxExtras    : '0.7.9.7',
+                  constraint  : '1.0.0-beta4']
+
+  ext {
+
+    minSdk = 21
+    targetSdk = 23
+    compileSdk = 23
+    buildTools = '25.0.1'
+
+    versionName = "1"
+    versionCode = 1
+
+    libs = [supportLib    : "com.android.support:appcompat-v7:$versions.supportLib",
+            rxJava        : "io.reactivex:rxjava:$versions.rxJava",
+            rxJavaString  : "io.reactivex:rxjava-string:$versions.rxJavaString",
+            rxAndroid     : "io.reactivex:rxandroid:$versions.rxAndroid",
+            butterknife   : "com.jakewharton:butterknife:$versions.butterknife",
+            butterknifeApt: "com.jakewharton:butterknife-compiler:$versions.butterknife",
+            lightCycle    : "com.soundcloud.lightcycle:lightcycle-lib:$versions.lightCycle",
+            lightCycleApt : "com.soundcloud.lightcycle:lightcycle-processor:$versions.lightCycle",
+            rxExtras      : "com.github.davidmoten:rxjava-extras:$versions.rxExtras",
+            constraint    : "com.android.support.constraint:constraint-layout:$versions.constraint"
+
     ]
+  }
 
-    ext {
-
-        minSdk = 21
-        targetSdk = 23
-        compileSdk = 23
-        buildTools = "23.0.3"
-
-        versionName = "1"
-        versionCode = 1
-
-        libs = [
-                supportLib    : "com.android.support:appcompat-v7:$versions.supportLib",
-                rxJava        : "io.reactivex:rxjava:$versions.rxJava",
-                rxJavaString  : "io.reactivex:rxjava-string:$versions.rxJavaString",
-                rxAndroid     : "io.reactivex:rxandroid:$versions.rxAndroid",
-                butterknife   : "com.jakewharton:butterknife:$versions.butterknife",
-                butterknifeApt: "com.jakewharton:butterknife-compiler:$versions.butterknife",
-                lightCycle    : "com.soundcloud.lightcycle:lightcycle-lib:$versions.lightCycle",
-                lightCycleApt : "com.soundcloud.lightcycle:lightcycle-processor:$versions.lightCycle",
-                rxExtras      : "com.github.davidmoten:rxjava-extras:$versions.rxExtras"
-
-        ]
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0-alpha3'
-        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.3'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-
-    }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.3.0-alpha1'
+    classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+    classpath 'me.tatarka:gradle-retrolambda:3.2.3'
+    classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+  }
 }
 
 allprojects {
-    repositories {
-        jcenter()
-    }
+  repositories {
+    jcenter()
+  }
 }

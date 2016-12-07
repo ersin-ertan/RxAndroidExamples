@@ -3,15 +3,15 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/danlewgrokkingrxjava" />
             <option value="$PROJECT_DIR$/futuricerxjava" />
+            <option value="$PROJECT_DIR$/loaders" />
             <option value="$PROJECT_DIR$/rxandquasar" />
             <option value="$PROJECT_DIR$/rxandroidsample" />
             <option value="$PROJECT_DIR$/rxextras" />

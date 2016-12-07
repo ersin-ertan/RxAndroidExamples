@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/danlewgrokkingrxjava/danlewgrokkingrxjava.iml" filepath="$PROJECT_DIR$/danlewgrokkingrxjava/danlewgrokkingrxjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/futuricerxjava/futuricerxjava.iml" filepath="$PROJECT_DIR$/futuricerxjava/futuricerxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loaders/loaders.iml" filepath="$PROJECT_DIR$/loaders/loaders.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxandquasar/rxandquasar.iml" filepath="$PROJECT_DIR$/rxandquasar/rxandquasar.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxandroidsample/rxandroidsample.iml" filepath="$PROJECT_DIR$/rxandroidsample/rxandroidsample.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxextras/rxextras.iml" filepath="$PROJECT_DIR$/rxextras/rxextras.iml" />
