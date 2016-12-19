@@ -3,8 +3,12 @@ package com.nullcognition.loaders;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Toast;
 import com.philosophicalhacker.lib.RxLoader;
 import java.util.List;
+import me.tatarka.loadie.Loader;
+import me.tatarka.loadie.LoaderManager;
+import me.tatarka.loadie.component.LoaderManagerProvider;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -34,7 +38,43 @@ public class MainActivity extends AppCompatActivity {
 
     //arturValsilov(github);
 
-    philoHacker(github);
+    //philoHacker(github);
+
+    loadie(github);
+  }
+
+  private void loadie(GithubService.GitHub github) {
+
+    LoaderManager loaderManager = LoaderManagerProvider.forActivity(this);
+
+    //loaderManager.init(0,
+    me.tatarka.loadie.RxLoader<List<GithubService.Contributor>> loader =
+        new me.tatarka.loadie.RxLoader<>(github.contributors("square", "retrofit"));
+
+    loader.setCallbacks(new Loader.Callbacks<List<GithubService.Contributor>>() {
+      @Override public void onLoaderStart() {
+        Toast.makeText(MainActivity.this, "Starting loader", Toast.LENGTH_SHORT).show();
+        Log.v("lstrt", "starting loader");
+      }
+
+      @Override public void onLoaderResult(List<GithubService.Contributor> contributors) {
+        Toast.makeText(MainActivity.this, "Result loader", Toast.LENGTH_SHORT).show();
+        for (GithubService.Contributor contributor : contributors) {
+          out(contributor.login, contributor.contributions);
+        }
+      }
+
+      @Override public void onLoaderError(Throwable throwable) {
+        Toast.makeText(MainActivity.this, "Error loader", Toast.LENGTH_SHORT).show();
+        Log.e("lodie", throwable.getMessage());
+      }
+
+      @Override public void onLoaderSuccess() {
+        Toast.makeText(MainActivity.this, "Success loader", Toast.LENGTH_SHORT).show();
+        Log.v("lsucces", "success loader");
+      }
+    });
+    loader.start();
   }
 
   void arturValsilov(GithubService.GitHub github) {
