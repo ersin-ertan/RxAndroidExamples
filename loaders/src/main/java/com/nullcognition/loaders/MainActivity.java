@@ -3,6 +3,8 @@ package com.nullcognition.loaders;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import com.philosophicalhacker.lib.RxLoader;
 import java.util.List;
@@ -21,6 +23,12 @@ import rx.schedulers.Schedulers;
 public class MainActivity extends AppCompatActivity {
 
   public static final String API_URL = "https://api.github.com";
+
+  Button button;
+
+  public static void out(String login, int contributions) {
+    System.out.println(login + " (" + contributions + ")");
+  }
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -48,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     LoaderManager loaderManager = LoaderManagerProvider.forActivity(this);
 
     //loaderManager.init(0,
-    me.tatarka.loadie.RxLoader<List<GithubService.Contributor>> loader =
+    final me.tatarka.loadie.RxLoader<List<GithubService.Contributor>> loader =
         new me.tatarka.loadie.RxLoader<>(github.contributors("square", "retrofit"));
 
     loader.setCallbacks(new Loader.Callbacks<List<GithubService.Contributor>>() {
@@ -74,7 +82,13 @@ public class MainActivity extends AppCompatActivity {
         Log.v("lsucces", "success loader");
       }
     });
-    loader.start();
+
+    button = (Button) findViewById(R.id.button);
+    button.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View view) {
+        loader.start();
+      }
+    });
   }
 
   void arturValsilov(GithubService.GitHub github) {
@@ -112,9 +126,5 @@ public class MainActivity extends AppCompatActivity {
             }
           }
         });
-  }
-
-  public static void out(String login, int contributions) {
-    System.out.println(login + " (" + contributions + ")");
   }
 }
